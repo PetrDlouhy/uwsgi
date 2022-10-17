@@ -369,9 +369,8 @@ int master_loop(char **argv, char **environ) {
 	uwsgi.current_time = uwsgi_now();
 
 	uwsgi_unix_signal(SIGTSTP, suspend_resume_them_all);
-	uwsgi_unix_signal(SIGHUP, grace_them_all);
+	uwsgi_unix_signal(SIGTERM, grace_them_all);
 
-	uwsgi_unix_signal(SIGTERM, kill_them_all);
 	uwsgi_unix_signal(SIGQUIT, reap_them_all);
 
 	uwsgi_unix_signal(SIGINT, kill_them_all);

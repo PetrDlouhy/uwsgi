@@ -47,7 +47,6 @@ void uwsgi_mule(int id) {
 		signal(SIGALRM, SIG_IGN);
                 signal(SIGHUP, end_me);
                 signal(SIGINT, end_me);
-                signal(SIGTERM, end_me);
                 signal(SIGUSR1, SIG_IGN);
                 signal(SIGUSR2, SIG_IGN);
                 signal(SIGPIPE, SIG_IGN);

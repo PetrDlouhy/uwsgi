@@ -85,7 +85,6 @@ void gateway_respawn(int id) {
 		signal(SIGALRM, SIG_IGN);
 		signal(SIGHUP, SIG_IGN);
 		signal(SIGINT, end_me);
-		signal(SIGTERM, end_me);
 		signal(SIGUSR1, SIG_IGN);
 		signal(SIGUSR2, SIG_IGN);
 		signal(SIGPIPE, SIG_IGN);

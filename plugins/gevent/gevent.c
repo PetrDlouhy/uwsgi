@@ -554,7 +554,6 @@ static void gevent_loop() {
 	python_call(ugevent.signal, ge_signal_tuple, 0, NULL);
 
 	ge_signal_tuple = PyTuple_New(2);
-	PyTuple_SetItem(ge_signal_tuple, 0, PyInt_FromLong(SIGTERM));
 	PyTuple_SetItem(ge_signal_tuple, 1, uwsgi_gevent_unix_signal_int_handler);
 	python_call(ugevent.signal, ge_signal_tuple, 0, NULL);
 

@@ -1998,7 +1998,6 @@ void emperor_loop() {
 	signal(SIGPIPE, SIG_IGN);
 	signal(SIGWINCH, emperor_wakeup);
 	uwsgi_unix_signal(SIGINT, royal_death);
-	uwsgi_unix_signal(SIGTERM, royal_death);
 	uwsgi_unix_signal(SIGQUIT, royal_death);
 	uwsgi_unix_signal(SIGUSR1, emperor_stats);
 	uwsgi_unix_signal(SIGHUP, emperor_massive_reload);

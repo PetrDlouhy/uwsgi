@@ -103,7 +103,6 @@ pid_t spooler_start(struct uwsgi_spooler * uspool) {
 		signal(SIGALRM, SIG_IGN);
 		signal(SIGHUP, SIG_IGN);
 		signal(SIGINT, end_me);
-		signal(SIGTERM, end_me);
 		// USR1 will be used to wake up the spooler
 		uwsgi_unix_signal(SIGUSR1, spooler_wakeup);
 		signal(SIGUSR2, SIG_IGN);
